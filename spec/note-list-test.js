@@ -5,14 +5,11 @@ function testNoteListInitialization() {
 
   noteList.addNote(note1);
   noteList.addNote(note2);
-  console.log(note1.text);
-  console.log(note2.text);
-  console.log(noteList);
-  console.log(noteList.notes);
-  console.log("hello2");
-  assert.isTrue(noteList.notes === ["test note", "another note"]);
-  console.log("hello3");
+
+  assert.isTrue(noteList.notes[0] === "test note")
+  assert.isTrue(noteList.notes[1] === "another note")
+  // === operator returns false when comparing two arrays
+  // assert.isTrue(noteList.notes === ["test note", "another note"]);
 };
-console.log("hello1");
+
 testNoteListInitialization();
-console.log("hello2");
